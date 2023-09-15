@@ -1,0 +1,35 @@
+{
+  "categorias": [
+    {
+      "id": 2,
+      "titulo": "Lazer"
+    },
+    {
+      "id": 3,
+      "titulo": "Trabalho"
+    }
+  ],
+  "notas": [
+    {
+      "id": 1,
+      "titulo": "Lavar o Cachorro",
+      "conteudo": "Shampooo",
+      "tema": "warning",
+      "categoriaId": "2"
+    },
+    {
+      "id": 3,
+      "titulo": "Ir na reunião",
+      "conteudo": "Reunião 14h30",
+      "tema": "danger",
+      "categoriaId": "3"
+    },
+    {
+      "id": 4,
+      "titulo": "Lavar o cachorro 🦮auauauaua",
+      "conteudo": "asdas",
+      "tema": "success",
+      "categoriaId": "2"
+    }
+  ]
+}
