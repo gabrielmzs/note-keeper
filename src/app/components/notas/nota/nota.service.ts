@@ -2,6 +2,7 @@ import { Injectable } from "@angular/core";
 import { Nota } from "./nota";
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
+import { environment } from "src/environments/environment";
 
 
 @Injectable({
@@ -9,8 +10,8 @@ import { Observable } from "rxjs";
 })
 export class NotaService {
 
-    private API_URl = 'http://localhost:3000/notas?_expand=categoria';
-    private API_SelecionaPorID = 'http://localhost:3000/notas/'
+    private API_URl = environment.API_URL + '/notas?_expand=categoria';
+    private API_SelecionaPorID = environment.API_URL + '/notas/'
     constructor(private http: HttpClient) {
 
     }
@@ -22,7 +23,7 @@ export class NotaService {
 
     editar(nota: Nota) {
 
-        return this.http.put<Nota>("http://localhost:3000/notas/" + nota.id, nota);
+        return this.http.put<Nota>(this.API_SelecionaPorID + nota.id, nota);
     }
 
     excluir(nota: Nota) {
@@ -39,6 +40,6 @@ export class NotaService {
     }
 
     selecionarPorCategoria(id: number) {
-        return this.http.get<Nota[]>("http://localhost:3000/categorias/" + id + "/notas/?_expand=categoria");
+        return this.http.get<Nota[]>(environment.API_URL + "/categorias/" + id + "/notas/?_expand=categoria");
     }
 }
