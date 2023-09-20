@@ -10,7 +10,7 @@ import { environment } from "src/environments/environment";
 })
 export class CategoriaService {
 
-    private API_URl = environment.API_URL + 'categorias/';
+    private API_URl = environment.API_URL + '/categorias/';
 
     constructor(private http: HttpClient) {
 
