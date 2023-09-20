@@ -14,7 +14,6 @@ export class Nota {
         this.conteudo = conteudo;
         this.tema = tema;
         this.categoriaId = categoriaId;
-
     }
 }
 
